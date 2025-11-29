@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: t-test-simple-server
+    ports:
+      - "8100:8100"
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Seoul
